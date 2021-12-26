@@ -4,7 +4,7 @@ class Counter extends React.Component {
 
     state = {
         count:0,
-        tags:[]
+        tags:['']
     };
 
     styles = {
@@ -17,13 +17,15 @@ class Counter extends React.Component {
         return (
             <div>
             <span style={this.styles} className={this.getBadgeClasses()}>{this.formatCount()}</span>
-            <button className="btn btn-secondary btn-sm">Increment</button>
+            <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">Increment</button>
             
-               {this.state.tags.length===0 && "Please create a new tag!"}
-               {this.renderTags()}
            
             </div>
         )
+    }
+
+    handleIncrement(){
+        console.log("Increment Clicked!!")
     }
 
     renderTags() {
