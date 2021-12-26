@@ -22,16 +22,13 @@ class Counter extends React.Component {
         return (
             <div>
             <span style={this.styles} className={this.getBadgeClasses()}>{this.formatCount()}</span>
-            <button onClick={this.doHandleIncrement} className="btn btn-secondary btn-sm">Increment</button>
+            <button onClick={ () => this.handleIncrement({id:1})} className="btn btn-secondary btn-sm">Increment</button>
             </div>
         )
     }
    // method = () = {} , is a way to call constructor, known as arraw notation
-    doHandleIncrement = () => {
-        this.handleIncrement({ id:1});
-    }
 
-    handleIncrement = (product) => {
+    handleIncrement = product => {
         console.log(product);
         this.setState({count: this.state.count + 1});
 
