@@ -20,7 +20,9 @@ class Counters extends React.Component {
             key={counter.id} 
             value={counter.values} 
             selected={true}
-        />
+        >
+        <h1> Counter #{counter.id}</h1>
+        </Counter>
        
        )}
         </div>

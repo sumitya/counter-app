@@ -20,8 +20,10 @@ class Counter extends React.Component {
     render() {
     
         console.log('props',this.props)
+
         return (
             <div>
+                {this.props.children}
             <span style={this.styles} className={this.getBadgeClasses()}>{this.formatCount()}</span>
             <button onClick={ () => this.handleIncrement({id:1})} className="btn btn-secondary btn-sm">Increment</button>
             </div>
