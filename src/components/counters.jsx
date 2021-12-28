@@ -10,7 +10,16 @@ class Counters extends React.Component {
             {id:3, values:0},
             {id:4, values:0}
         ]
+
     };
+
+    handleDelete = () => {
+        console.log('Event Handle Called!');
+    }
+
+    blabla = () => {
+        console.log('blabla');
+    }
 
     render() { 
         return (
@@ -19,7 +28,8 @@ class Counters extends React.Component {
         <Counter 
             key={counter.id} 
             value={counter.values} 
-            selected={true}
+            onDelete={this.handleDelete}
+            bla={this.blabla}
         >
         <h1> Counter #{counter.id}</h1>
         </Counter>
