@@ -5,10 +5,10 @@ class Counters extends React.Component {
 
     state = {
         counters: [
-            {id:1, value:1},
-            {id:2, value:2},
-            {id:3, value:3},
-            {id:4, value:4}
+            {id:1, values:1},
+            {id:2, values:0},
+            {id:3, values:0},
+            {id:4, values:0}
         ]
     };
 
@@ -16,8 +16,13 @@ class Counters extends React.Component {
         return (
         <div>
         {this.state.counters.map(counter => 
-        <Counter key={counter.id} value={counter.value} />
-        )}
+        <Counter 
+            key={counter.id} 
+            value={counter.values} 
+            selected={true}
+        />
+       
+       )}
         </div>
         );
     }
