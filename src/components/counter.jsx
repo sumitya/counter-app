@@ -8,8 +8,8 @@ class Counter extends React.Component {
     }
 
     state = {
-        count:0,
-        tags:['']
+        count: 0
+        //tags:['']
     };
 
     styles = {
@@ -19,14 +19,17 @@ class Counter extends React.Component {
    
     render() {
     
+        //console.log('props',this.props)
         return (
             <div>
             <span style={this.styles} className={this.getBadgeClasses()}>{this.formatCount()}</span>
             <button onClick={ () => this.handleIncrement({id:1})} className="btn btn-secondary btn-sm">Increment</button>
             </div>
         )
+   
     }
    // method = () = {} , is a way to call constructor, known as arraw notation
+   
 
     handleIncrement = product => {
         console.log(product);
