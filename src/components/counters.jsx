@@ -28,11 +28,11 @@ class Counters extends React.Component {
         <div>
         {this.state.counters.map(counter => 
         <Counter 
-            key={counter.id} 
-            value={counter.values} 
+            key={counter.id} //key i used internally by react
+            counter={counter}
             onDelete={this.handleDelete}
             bla={this.blabla}
-            id={counter.id}
+            
         >
         <h1> Counter #{counter.id}</h1>
         </Counter>
