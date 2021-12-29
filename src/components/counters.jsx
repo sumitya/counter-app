@@ -5,12 +5,16 @@ class Counters extends React.Component {
 
     state = {
         counters: [
-            {id:1, values:1},
-            {id:2, values:0},
-            {id:3, values:0},
-            {id:4, values:0}
+            {id:1, value:10},
+            {id:2, value:20},
+            {id:3, value:30},
+            {id:4, value:40}
         ]
 
+    };
+
+    handleIncrement = counter => {
+        console.log(counter);
     };
 
     handleReset = () => {
@@ -38,9 +42,10 @@ class Counters extends React.Component {
         <button onClick={this.handleReset} className="btn btn-primary btn-sm m-2">reset</button>
         {this.state.counters.map(counter => 
         <Counter 
-            key={counter.id} //key i used internally by react
+            key={counter.id} //key is used internally by react
             counter={counter}
             onDelete={this.handleDelete}
+            onIncrement={this.handleIncrement}
             bla={this.blabla}
             
         >
