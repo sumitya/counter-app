@@ -8,16 +8,18 @@ class Counters extends React.Component {
     }
 
     render() {
+
+        const {counters, onReset, onDelete, onIncrement } = this.props;
         return (
         <div>
         
-        <button onClick={this.props.onReset} className="btn btn-primary btn-sm m-2">reset</button>
-        {this.props.counters.map(counter => 
+        <button onClick={onReset} className="btn btn-primary btn-sm m-2">reset</button>
+        {counters.map(counter => 
         <Counter 
             key={counter.id} //key is used internally by react
             counter={counter}
-            onDelete={this.props.onDelete}
-            onIncrement={this.props.onIncrement}
+            onDelete={onDelete}
+            onIncrement={onIncrement}
             bla={this.blabla}
             
         >
